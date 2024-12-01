@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './assets/logo.svg';
 import michaeljoshpf from './assets/michaeljoshpf.jpg';
 import linkedinIcon from './assets/nav-icon.svg';
+
 import './App.css';
 import { useState } from 'react';
 
