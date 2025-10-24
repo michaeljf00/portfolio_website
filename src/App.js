@@ -5,6 +5,9 @@ import linkedinIcon from './assets/nav-icon.svg';
 
 import './App.css';
 import { useState } from 'react';
+import Routes from './routes';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import router from './routes';
 
 
 function TestButton() {
@@ -25,8 +28,9 @@ const ProfileInfo = { name: 'Michael', skills: "Full Stack, Data Science", degre
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="App">]
+      <RouterProvider router={router}/>
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <img src={michaeljoshpf} className="Profile-photo" alt="profile" />
         <p>
@@ -44,7 +48,7 @@ function App() {
           <a hrf="#"><img src={linkedinIcon} alt="" /></a>
         </div>
         <TestButton/>
-      </header>
+      </header> */}
     </div>
   );
 }

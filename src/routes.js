@@ -1,17 +1,31 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
+import Home from './pages/home';
+import About from './pages/about';
+import Projects from './pages/projects';
+import Contact from './pages/contact';
+import NotFound from './pages/not-found';
 
-const AppRoutes = () => {
-    return (
-        <Routes>
-            {/* <Route path="/" element={<Home/>} />
-            <Route path="/about" element={<About/>} />
-            <Route path="/projects" element={<Projects/>} />
-            <Route path="/contact" element={<Contact/>} /> */}
-        </Routes>
-    );
-}
+const router = createBrowserRouter([
+    {
+        path: "/",
+        element: <Home/>,
+        errorElement: <NotFound/> 
+    },
+    {
+        path: "/about",
+        element: <About/>,
+    },
+    {
+        path: "/projects",
+        element: <Projects/>
+    },
+    {
+        path: "/contact",
+        element: <Contact/>
+    }
+]);
 
-
-export default Routes;
+export default router;
